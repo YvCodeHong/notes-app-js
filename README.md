@@ -17,7 +17,12 @@ Javascript/HTML with self-created suite for testing.
 
 ## Implementation
 
+Download repo, and navigate to root. Prerequisites: Node and npm installed.
 
+```
+npm install http-server --save # Install the server
+node node_modules/http-server/bin/http-server # To run the server
+```
 
 ## Further Improvements
 
