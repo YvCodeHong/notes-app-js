@@ -1,9 +1,19 @@
+var notelist = new NoteList();
+var notecontroller = new NoteController(notelist);
+
 function testInstantiation() {
-  var notecontroller = new NoteController();
   assert.isTrue(notecontroller instanceof NoteController);
 };
 
-testInstantiation();
+function addNote() {
+  notecontroller.addNote('Favourite drink: seltzer');
+  assert.isTrue(notecontroller.notelist.returnNotes()[0] === 'Favourite drink: seltzer')
+}
 
-// A note controller can be instantiated
-// innterHTML property of app element contains html similar to other (need mocking for this)
+function viewNotes() {
+  assert.isTrue(notecontroller.viewNotes(notelist) === "<ul><li><div>Favourite drink: seltzer</div></li></ul>")
+}
+
+testInstantiation();
+addNote();
+viewNotes();
