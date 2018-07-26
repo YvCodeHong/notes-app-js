@@ -5,14 +5,14 @@ function testInstantiation() {
   assert.isTrue(singlenoteview instanceof SingleNoteView);
 };
 
-function takesNoteParameter() {
+function testTakesNoteParameter() {
   assert.isTrue(singlenoteview.note instanceof Note);
 };
 
-function displaysNoteHTML() {
+function testDisplaysNoteHTML() {
   assert.isTrue(singlenoteview.noteHTML() === "<div>Test</div>")
 };
 
 testInstatiation();
-takesNoteParameter();
-displaysNoteHTML();
+testTakesNoteParameter();
+testDisplaysNoteHTML();
